@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghitung Kuota Internet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Penghitung Kuota Internet</h1>
+        <div id="menu">
+            <button onclick="showCalculator()">Hitung Penggunaan Kuota</button>
+            <button onclick="showTutorial()">Tutorial</button>
+        </div>
+        <div id="calculator" class="hidden">
+            <label for="datetime">Masukkan tanggal dan jam:</label>
+            <input type="datetime-local" id="datetime">
+            
+            <label for="quota">Masukkan total kuota internet (dalam MB):</label>
+            <input type="number" id="quota" placeholder="700" min="0">
+            
+            <button onclick="startCountdown()">Mulai</button>
+            
+            <div id="output"></div>
+        </div>
+        <div id="tutorial" class="hidden">
+            <h2>Tutorial Penggunaan Program</h2>
+            <p>1. Jalankan program.</p>
+            <p>2. Pilih opsi "Hitung Penggunaan Kuota" atau "Tutorial".</p>
+            <p>3. Jika memilih opsi "Hitung Penggunaan Kuota":</p>
+            <ul>
+                <li>Masukkan tanggal dan waktu target menggunakan field yang tersedia.</li>
+                <li>Masukkan total kuota internet dalam MB.</li>
+                <li>Program akan menghitung dan menampilkan waktu mundur serta penggunaan kuota.</li>
+            </ul>
+            <p>4. Output program akan menampilkan:</p>
+            <ul>
+                <li>Waktu mundur dalam format: day:hour:minute:second.</li>
+                <li>Kuota yang digunakan dan total kuota dalam format yang sesuai (MB, GB, atau KB).</li>
+                <li>Penggunaan kuota per detik, per menit, atau per jam tergantung pada sisa waktu.</li>
+            </ul>
+            <p>5. Setelah waktu habis, program akan menampilkan 'Waktu habis!' dan berhenti.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
